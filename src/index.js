@@ -24,7 +24,7 @@ function imagesConvert(option) {
       return cb();
     }
     if (file.isBuffer()) {
-      file.contents = images(file.contents).encode(targetType, quality)
+      file.contents = images(file.contents).encode(targetType, { operation: quality })
     }
 
     this.push(file);
